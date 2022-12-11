@@ -1,0 +1,295 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #646565;
+    color: #e0dede;
+    font-size: 1rem;;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12vw;
+    margin-right: 12vw;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.2rem;
+    
+}
+p,
+h2,
+li {
+    font-weight:normal;
+    color: #aeaeac;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: black;
+}
+
+img {
+    border: solid 6px #fff;
+    outline: solid 4px #888;
+}
+
+.logo {
+    display: flex;
+    margin: 0.6vw;
+}
+
+.logo > img {
+    border: none;
+    outline: none;
+}
+
+.menu > div{
+    margin-right: 7vw;
+    align-self: center;
+    display: flex;
+}
+
+.menu > div > nav {
+    display: flex;
+    align-self: center;
+}
+
+.menu > div > nav > a{
+    display: block;
+    text-decoration: none;
+    border: 2px solid transparent;
+    color: #e0dede;
+    padding: 0.3vw;
+}
+
+.menu > div > nav > a:hover,
+.menu > div > nav > a.active{
+    background-color: #4a4b4be9;
+}
+
+.menu > div > img {
+    opacity: 0;
+    border: none;
+    outline: none;
+    align-self:flex-start;
+    justify-content: flex-start;
+    margin-right: 7vw;
+    height: 8vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type:"- ";
+}
+
+
+.aboutMe,
+.lastWorks,
+.inst {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutMe > h2,
+.lastWorks > h2,
+.inst > h2 {
+    align-self: center;
+    margin: 2vh 0;
+    font-size: 1.5rem;
+}
+
+.aboutMe > div {
+    display: flex;
+}
+
+.aboutMe > div > div {
+    display: flex;
+}
+
+.aboutMe-img > img {
+    width: 25vw;
+    margin-left: 1vh;
+}
+
+.aboutMe-text {
+    width: 20vw;
+    margin-left: 2vw;
+}
+
+.aboutMe-text > p,
+.aboutMe-text > h3,
+.aboutMe-list > ul > li
+ {
+    margin: 1vw 0;
+}
+
+.aboutMe-list {
+    margin-left: 5vw;
+}
+
+.lastWorks {
+    display: flex;
+    flex-direction: column;
+}
+
+.lastWorks-photos-row1,
+.lastWorks-photos-row2,
+.lastWorks-photos-row3 {
+    display: flex;
+    flex-basis: 100%;
+}
+
+.lastWorks-photos-row1 > div > img {
+    width: 23vw;
+    height: 31vh;
+}
+
+.lastWorks-photos-row2 > div > img {
+    width: 35.5vw;
+    height: 40vh;
+}
+
+.lastWorks-photos-row3 > div > img {
+    width: 73vw;
+}
+
+.ph {
+    cursor: pointer;
+    position: relative;
+}
+
+.ph-details {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.57);
+    position: absolute;
+    top: 4vh;
+    right: 2vw;
+    left: 2vw;
+    padding: 3vw;
+}   
+
+.ph:hover .ph-details { 
+    opacity: 1;
+    transition: 0.7s; 
+}
+
+.ph > img {
+    margin: 0.5vw;
+}
+
+.ph-details > p {
+    color: black;
+}    
+
+.ph-details > h4 {
+    margin-bottom: 1vh;
+} 
+
+.inst-photos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0.5vw;
+}
+
+.inst-ph {
+    cursor: pointer;
+    position: relative;
+}
+
+.inst-ph-fileicon {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.57);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inst-ph:hover .inst-ph-fileicon { 
+    opacity: 1;
+    transition: 0.7s; 
+}
+
+.inst-ph-fileicon > img{
+    border: none;
+    outline: none;
+}
+
+.inst-photos > div > img {
+    width: 11vw; 
+    flex-basis: 15%;
+    margin: 0 0.2vw;
+}
+
+footer {
+    margin: 5vh 0 2vh 1vh ;
+}
+
+@media screen and (max-width:1024px) {
+    .aboutMe > div {
+        flex-direction: column;
+    }
+    .aboutMe-img > img {
+        width: 72vw;
+        margin-left: 2vh;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .menu > div > nav{
+        opacity: 0;
+    }
+    .menu > div > img {
+        opacity: 1;
+    }
+    .lastWorks-photos-row1,
+    .lastWorks-photos-row2 {
+        flex-direction: column;
+    }
+
+    .lastWorks-photos-row1 > div > img,
+    .lastWorks-photos-row2 > div > img {
+        width: 73vw;
+        height: auto;
+    } 
+    .lastWorks-photos-row1 > .ph > .ph-details,
+    .lastWorks-photos-row2 > .ph > .ph-details {
+        right: 27vw;
+    }   
+}
